@@ -1,0 +1,28 @@
+{
+  "name": "client-firewall-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "sync": "node scripts/sync-content.mjs",
+    "test": "vitest run",
+    "handout": "node scripts/make-handout.mjs"
+  },
+  "dependencies": {
+    "next": "16.4.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.3.3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^6.1.2",
+    "jsdom": "^29.1.1",
+    "typescript": "^5",
+    "vitest": "^4.1.11"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Client Firewall",
+  "tagline": "Keep one client's information out of another client's work in Claude.",
+  "problem": "If you work inside several companies at once, one rushed paste into Claude can put Client B's numbers into Client A's deliverable.",
+  "steps": [
+    "In claude.ai, create one Project per client.",
+    "Paste the instructions below into the Project's instructions.",
+    "Fill in the rules file for that client and add it to the Project's knowledge."
+  ],
+  "colors": [
+    { "verdict": "GREEN", "rule": "Nothing risky. Claude drafts as normal." },
+    { "verdict": "AMBER", "rule": "Sensitive details the task doesn't need. Claude offers a cleaned-up version first." },
+    { "verdict": "RED", "rule": "Another client's details or a never-share item. Claude stops and tells you what to remove." }
+  ],
+  "demoLabels": {
+    "step1-recap": "1. Recap email (Acme notes only)",
+    "step2-linkedin": "2. LinkedIn post (same chat, same notes)",
+    "step3-board": "3. Board update (whole week's notes pasted)"
+  },
+  "limits": [
+    "It only knows the clients you list in the rules file, plus obviously sensitive data.",
+    "It's a second check, not a guarantee. The model can be wrong.",
+    "You still decide what gets sent."
+  ],
+  "author": { "name": "Jared Chapman", "linkedin": "linkedin.com/in/thejaredchapman", "site": "thejaredchapman.com" },
+  "repo": "github.com/thejaredchapman/client-firewall"
+}
