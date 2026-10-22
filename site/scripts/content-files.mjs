@@ -1,4 +1,5 @@
 // [source relative to repo root, destination relative to site/, required]
+/** @type {[string, string, boolean][]} */
 export const CONTENT_FILES = [
   ["template/project-instructions.md", "content/project-instructions.md", true],
   ["template/client-rules.template.md", "content/client-rules.template.md", true],
