@@ -4,8 +4,8 @@
   "problem": "If you work inside several companies at once, one rushed paste into Claude can put Client B's numbers into Client A's deliverable.",
   "steps": [
     "In claude.ai, create one Project per client.",
-    "Paste the instructions below into the Project's instructions.",
-    "Fill in the rules file for that client and add it to the Project's knowledge."
+    "Paste the Client Firewall instructions into the Project's instructions.",
+    "Fill in a rules file for that client and add it to the Project's knowledge."
   ],
   "colors": [
     { "verdict": "GREEN", "rule": "Nothing risky. Claude drafts as normal." },
