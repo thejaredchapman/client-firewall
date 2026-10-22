@@ -1,0 +1,9 @@
+{
+  "source_url": "https://claude.com/pricing",
+  "checked": "2026-10-22",
+  "models": {
+    "claude-haiku-5-5": {"label": "Haiku 5.5", "input_per_mtok": 0.10, "output_per_mtok": 0.50},
+    "claude-sonnet-5-5": {"label": "Sonnet 5.5", "input_per_mtok": 2, "output_per_mtok": 10},
+    "claude-opus-5-5": {"label": "Opus 5.5", "input_per_mtok": 4, "output_per_mtok": 20}
+  }
+}
