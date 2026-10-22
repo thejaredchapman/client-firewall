@@ -51,6 +51,10 @@ export function formatUsd(n: number): string {
   return n < 0.01 ? `$${n.toFixed(4)}` : `$${n.toFixed(2)}`;
 }
 
+export function formatPerCheck(n: number): string {
+  return `$${n.toFixed(4)}`;
+}
+
 export function readContent(dir = path.join(process.cwd(), "content")) {
   const read = (name: string) => fs.readFileSync(path.join(dir, name), "utf8");
   const notes = read("weekly-notes.md");

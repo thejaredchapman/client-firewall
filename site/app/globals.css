@@ -1,4 +1,5 @@
 :root {
+  color-scheme: light dark;
   --bg: #fbfaf7;
   --fg: #1d1d1b;
   --muted: #5d5b55;
@@ -43,7 +44,8 @@ pre { white-space: pre-wrap; word-break: break-word; font-size: 0.85rem; max-hei
 .verdict { font-weight: 700; }
 .GREEN { color: var(--green); } .AMBER { color: var(--amber); } .RED { color: var(--red); }
 table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
-th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--border); }
+.table-wrap { overflow-x: auto; }
+th, td { white-space: nowrap; text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--border); }
 .note { color: var(--muted); font-size: 0.9rem; }
 footer { margin-top: 56px; color: var(--muted); font-size: 0.9rem; }
 a { color: var(--accent); }

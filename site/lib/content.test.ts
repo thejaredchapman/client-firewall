@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { CONTENT_FILES } from "../scripts/content-files.mjs";
-import { buildMessage, formatUsd, readContent, splitNotes, type DemoInput } from "./content";
+import { buildMessage, formatPerCheck, formatUsd, readContent, splitNotes, type DemoInput } from "./content";
 
 const site = process.cwd(); // vitest runs from site/
 const repo = path.resolve(site, "..");
@@ -47,5 +47,12 @@ describe("formatUsd", () => {
   it("shows small amounts with four decimals and larger with two", () => {
     expect(formatUsd(0.00412)).toBe("$0.0041");
     expect(formatUsd(4.123)).toBe("$4.12");
+  });
+});
+
+describe("formatPerCheck", () => {
+  it("always shows four decimals so the column lines up", () => {
+    expect(formatPerCheck(0.01428)).toBe("$0.0143");
+    expect(formatPerCheck(0.000378)).toBe("$0.0004");
   });
 });

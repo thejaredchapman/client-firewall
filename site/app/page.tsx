@@ -1,6 +1,6 @@
 import copy from "@/content/copy.json";
 import { CopyButton } from "@/components/CopyButton";
-import { formatUsd, readContent } from "@/lib/content";
+import { formatPerCheck, formatUsd, readContent } from "@/lib/content";
 
 const DOT = { GREEN: "🟢", AMBER: "🟡", RED: "🔴" } as const;
 const labels = copy.demoLabels as Record<string, string>;
@@ -16,7 +16,7 @@ export default function Home() {
         {copy.colors.map((color) => (
           <p key={color.verdict}>
             <span className={`verdict ${color.verdict}`}>
-              {DOT[color.verdict as keyof typeof DOT]} {color.verdict}
+              <span aria-hidden="true">{DOT[color.verdict as keyof typeof DOT]}</span> {color.verdict}
             </span>{" "}
             {color.rule}
           </p>
@@ -70,7 +70,7 @@ export default function Home() {
           <p className="note">
             Should come back:{" "}
             <span className={`verdict ${input.expected}`}>
-              {DOT[input.expected]} {input.expected}
+              <span aria-hidden="true">{DOT[input.expected]}</span> {input.expected}
             </span>
           </p>
           <pre>{message}</pre>
@@ -84,6 +84,7 @@ export default function Home() {
       </p>
       {c.summary ? (
         <>
+          <div className="table-wrap">
           <table>
             <thead>
               <tr>
@@ -101,15 +102,16 @@ export default function Home() {
                   <td>
                     {m.correct}/{m.checks}
                   </td>
-                  <td>{formatUsd(m.avg_cost_usd)}</td>
+                  <td>{formatPerCheck(m.avg_cost_usd)}</td>
                   <td>{formatUsd(m.avg_cost_usd * 1000)}</td>
                   <td>{m.avg_latency_s}s</td>
                 </tr>
               ))}
             </tbody>
           </table>
+          </div>
           <p className="note">
-            Measured {c.summary.generated}, {c.summary.runs} runs per input. Prices from{" "}
+            Measured {c.summary.generated}: 5 test messages (the 3 above plus 2 edge cases), {c.summary.runs} runs each. Prices from{" "}
             <a href={c.summary.prices_source}>{c.summary.prices_source}</a>, checked {c.summary.prices_checked}.
           </p>
         </>
