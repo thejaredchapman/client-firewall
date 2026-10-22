@@ -1,0 +1,11 @@
+.env
+.DS_Store
+measure/.venv/
+__pycache__/
+.pytest_cache/
+site/node_modules/
+site/.next/
+site/next-env.d.ts
+site/*.tsbuildinfo
+.vercel/
+site/.vercel/
