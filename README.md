@@ -36,6 +36,8 @@ measure/.venv/bin/python -m pytest tests
 
 Prices live in `measure/prices.json` with the source URL and the date they were checked. Results go to `measure/results.csv` and `measure/summary.json`.
 
+**Sample responses:** [`measure/sample-responses.md`](measure/sample-responses.md) shows one full reply from each model for each test message, with the exact system prompt and user message that produced it. Regenerate with `measure/.venv/bin/python measure/sample_responses.py`.
+
 ## Site and handout
 
 ```bash
