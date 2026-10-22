@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Client Firewall</title>
+<style>
+  @page { size: Letter; margin: 0.6in; }
+  body { font: 12.5pt/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; color: #1d1d1b; margin: 0; }
+  h1 { font-size: 30pt; margin: 0; line-height: 1.1; }
+  .tagline { font-size: 15pt; color: #5d5b55; margin: 6pt 0 18pt; }
+  .grid { display: grid; grid-template-columns: 1fr 2.3in; gap: 0.35in; align-items: start; }
+  h2 { font-size: 14pt; margin: 16pt 0 6pt; }
+  ol, ul { margin: 0; padding-left: 18pt; }
+  .color { margin: 4pt 0; }
+  .color b { display: inline-block; min-width: 54pt; }
+  .qr { text-align: center; }
+  .qr svg { width: 2.1in; height: 2.1in; }
+  .url { font-weight: 700; font-size: 11pt; word-break: break-all; margin-top: 4pt; }
+  .scan { color: #5d5b55; font-size: 10.5pt; }
+  .limit { margin-top: 22pt; padding: 10pt 12pt; border: 1px solid #e3e0d8; border-radius: 8pt; }
+  footer { margin-top: 22pt; color: #5d5b55; font-size: 10.5pt; }
+</style></head><body>
+  <h1>Client Firewall</h1>
+  <p class="tagline">Keep one client's information out of another client's work in Claude.</p>
+  <div class="grid">
+    <div>
+      <p>If you work inside several companies at once, one rushed paste into Claude can put Client B's numbers into Client A's deliverable.</p>
+      <h2>Set up in 3 steps</h2>
+      <ol><li>In claude.ai, create one Project per client.</li><li>Paste the instructions below into the Project's instructions.</li><li>Fill in the rules file for that client and add it to the Project's knowledge.</li></ol>
+      <h2>Before Claude writes a word</h2>
+      <p class="color"><b style="color:#1f7a3f">● GREEN</b>Nothing risky. Claude drafts as normal.</p><p class="color"><b style="color:#9a6200">● AMBER</b>Sensitive details the task doesn't need. Claude offers a cleaned-up version first.</p><p class="color"><b style="color:#b42318">● RED</b>Another client's details or a never-share item. Claude stops and tells you what to remove.</p>
+    </div>
+    <div class="qr">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 31" shape-rendering="crispEdges"><path fill="#ffffff" d="M0 0h31v31H0z"/><path stroke="#000000" d="M1 1.5h7m1 0h2m3 0h3m1 0h4m1 0h7M1 2.5h1m5 0h1m1 0h1m2 0h3m2 0h3m1 0h1m1 0h1m5 0h1M1 3.5h1m1 0h3m1 0h1m4 0h2m3 0h1m2 0h2m1 0h1m1 0h3m1 0h1M1 4.5h1m1 0h3m1 0h1m1 0h3m1 0h1m1 0h2m1 0h3m2 0h1m1 0h3m1 0h1M1 5.5h1m1 0h3m1 0h1m2 0h1m1 0h1m2 0h1m1 0h1m2 0h1m2 0h1m1 0h3m1 0h1M1 6.5h1m5 0h1m2 0h3m1 0h1m1 0h6m1 0h1m5 0h1M1 7.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M9 8.5h2m1 0h2m2 0h3m2 0h1M1 9.5h1m1 0h2m1 0h3m4 0h2m1 0h5m2 0h1m2 0h1m1 0h2M3 10.5h1m1 0h1m6 0h1m1 0h3m3 0h6m3 0h1M1 11.5h1m3 0h4m2 0h1m1 0h2m4 0h1m2 0h2m3 0h2M1 12.5h3m1 0h1m2 0h2m1 0h2m4 0h1m3 0h1m2 0h1m4 0h1M3 13.5h1m1 0h1m1 0h1m2 0h4m1 0h4m2 0h1m4 0h2M2 14.5h2m1 0h1m2 0h6m1 0h4m1 0h1m1 0h2m3 0h3M1 15.5h1m1 0h1m3 0h1m1 0h6m2 0h1m1 0h6m2 0h3M2 16.5h2m1 0h2m4 0h3m1 0h2m4 0h2m5 0h1M6 17.5h6m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m2 0h3m1 0h1M2 18.5h1m2 0h1m6 0h1m2 0h2m2 0h1m1 0h1m2 0h1m1 0h3M1 19.5h1m1 0h1m3 0h4m1 0h1m1 0h6m3 0h1m1 0h1m1 0h1M6 20.5h1m1 0h1m1 0h1m1 0h4m2 0h1m1 0h3m2 0h1m1 0h1M2 21.5h2m1 0h5m4 0h2m1 0h11M9 22.5h1m1 0h3m3 0h1m1 0h3m3 0h5M1 23.5h7m1 0h1m1 0h2m2 0h1m4 0h2m1 0h1m1 0h2m1 0h1M1 24.5h1m5 0h1m1 0h1m2 0h5m2 0h1m1 0h1m3 0h2M1 25.5h1m1 0h3m1 0h1m2 0h1m1 0h2m4 0h1m2 0h5m1 0h2M1 26.5h1m1 0h3m1 0h1m1 0h1m2 0h1m1 0h1m1 0h1m1 0h1m1 0h3m1 0h3m2 0h1M1 27.5h1m1 0h3m1 0h1m1 0h1m1 0h1m3 0h1m1 0h1m1 0h3m2 0h1m2 0h1m1 0h1M1 28.5h1m5 0h1m5 0h2m1 0h2m3 0h1m2 0h1m1 0h1m1 0h1M1 29.5h7m1 0h1m3 0h1m1 0h2m2 0h3m1 0h2m3 0h1"/></svg>
+
+      <div class="url">client-firewall.vercel.app</div>
+      <div class="scan">Scan for the free template, setup steps and a 3-message demo to try.</div>
+    </div>
+  </div>
+  <div class="limit"><b>It's a second check, not a guarantee.</b> It only knows the clients you list in the rules file, plus obviously sensitive data. It's a second check, not a guarantee. The model can be wrong.</div>
+  <footer>Jared Chapman · linkedin.com/in/thejaredchapman · thejaredchapman.com</footer>
+</body></html>
