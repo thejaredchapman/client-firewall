@@ -9,3 +9,4 @@ site/next-env.d.ts
 site/*.tsbuildinfo
 .vercel/
 site/.vercel/
+docs/superpowers/
